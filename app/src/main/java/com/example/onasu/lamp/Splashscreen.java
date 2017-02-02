@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class Splashscreen extends AppCompatActivity {
 
-
+    //ประกาศตัวแปร
     private Handler myhandler;
 
     @Override
@@ -15,7 +15,7 @@ public class Splashscreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
 
-
+        // หน้า พักหน้าจอ
         Handler myHandler = new Handler();
         myHandler.postDelayed(new Runnable() {
             @Override
@@ -31,4 +31,6 @@ public class Splashscreen extends AppCompatActivity {
 
 
     }
+
+
 }
