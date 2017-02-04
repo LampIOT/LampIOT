@@ -3,7 +3,6 @@ package com.example.onasu.lamp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.google.firebase.database.DatabaseReference;
@@ -17,7 +16,6 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class MainActivity extends AppCompatActivity {
     private ToggleButton mToggle;
-    private TextView mText;
 
     //กำหนดค่าให้เชื่อมต่อกับ FirebaseDatabase
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -34,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ////ปุ่มกด off-on
         mToggle=(ToggleButton)findViewById(R.id.toggleButton);
-        mText=(TextView)findViewById(R.id.textView2);
 
 
         //คลิกเพื่อส่งข้อมูลไปยัง FirebaseDatabase
@@ -44,12 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mToggle.isChecked()){
                     myRef.setValue("0");
-                    mText.setText("On");
                 }
                 else
                 {
                     myRef.setValue("1");
-                    mText.setText("Off");
                 }
             }
         });
